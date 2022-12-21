@@ -1,0 +1,89 @@
+.new-card {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+    background: rgba($color: gray, $alpha: 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__close {
+        font-size: 20px;
+        position: absolute;
+        cursor: pointer;
+        font-size: 30px;
+        top: -10px;
+        right: 0px;
+    }
+    &__content {
+        position: relative;
+        padding: 10px;
+        width: 500px;
+        height: 500px;
+        background: white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 15px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid black;
+    }
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+    }
+    &__field {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        position: relative;
+        label {
+            font-size: 15px;
+        }
+        input {
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+    &__field-checkbox {
+        input {
+            margin-right: 5px;
+        }
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }
+    &__input {
+        border: 2px solid gray;
+        border-radius: 5px;
+        width: 280px;
+    }
+    &__input--error {
+        border-color: red;
+    }
+    &__add {
+        height: 40px;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        transition: all .2s;
+        &:hover {
+            background: rgb(207, 204, 204);
+        }
+    }
+    &__text-error {
+        color: red;
+        position: absolute;
+        top: 60px;
+    }
+}

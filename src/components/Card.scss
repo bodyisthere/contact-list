@@ -1,0 +1,63 @@
+.card {
+    width: 100%;
+    height: 80px;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+    border: 2px solid gray;
+    margin-bottom: 10px;
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        margin-right: 10px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    &__number {
+        font-size: 15px;
+    }
+    &__buttons {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        cursor: pointer;
+        button {
+            background: transparent;
+            font-size: 20px;
+        }
+        i {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__like--active {
+        color: red;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        &__avatar {
+            width: 50px;
+            height: 50px;
+        }
+        &__name {
+            font-size: 15px;
+        }
+        &__number {
+            font-size: 13px;
+        }
+    }
+}
